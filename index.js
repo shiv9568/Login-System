@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 const SECRET = "YOUR_HIDDEN_KEY";
 mongoose.connect(

@@ -8,7 +8,10 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 
-app.use(cors({ origin: "*" }));
+app.use(cors({
+  origin: 'https://login-system-tawny.vercel.app',
+  credentials: true,
+}));
 
 const SECRET = "YOUR_HIDDEN_KEY";
 mongoose.connect(
